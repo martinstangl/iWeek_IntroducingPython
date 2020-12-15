@@ -1,9 +1,15 @@
+import random
+
+
 class Auto:
-    def __init__(self, c, speed, tank, fahrbereit=True):
-        self.color = c
+    def __init__(self, speed, tank, fahrbereit=True):
+        self.color = (random.randint(0, 255),
+                      random.randint(0, 255),
+                      random.randint(0, 255))
         self.speed = speed
         self.tank = tank
         self.fahrbereit = fahrbereit
+        self.pos = [0, 0]
 
     def acc(self, a):
         self.speed += a
